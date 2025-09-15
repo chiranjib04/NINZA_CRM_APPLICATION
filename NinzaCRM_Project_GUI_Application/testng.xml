@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="NinzaCrmTest">
+    <classes>
+      <class name="com.ninza.crm.Campaign_TestCase.CreateCampaignPageTest"/>
+      <class name="com.ninza.crm.d.Product_TestCase.CreateProductPageTest"/>
+    </classes>
+  </test> <!-- NinzaCrmTest -->
+</suite> <!-- Suite -->

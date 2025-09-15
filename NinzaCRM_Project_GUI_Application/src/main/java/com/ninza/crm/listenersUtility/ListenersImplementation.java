@@ -1,0 +1,89 @@
+package com.ninza.crm.listenersUtility;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Date;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.io.FileHandler;
+import org.testng.ISuite;
+import org.testng.ISuiteListener;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
+import com.ninza.crm.baseClass.BaseClass;
+
+public class ListenersImplementation implements ITestListener,ISuiteListener
+{
+	ExtentReports report;
+	ExtentTest test;
+	
+	@Override
+	public void onStart(ISuite result)
+	{	
+		System.out.println("---report configuration---");
+		Date d=new Date();
+		String date=d.toString().replace(" ", ":").replace(":", "/");
+		ExtentSparkReporter spark=new ExtentSparkReporter("./ExtentReports/Report/"+ date +".html");
+		spark.config().setDocumentTitle("CRM Report");
+		spark.config().setReportName("Ninza CRM Report");
+		spark.config().setTheme(Theme.DARK);
+		
+		report=new ExtentReports();
+		report.attachReporter(spark);
+		report.setSystemInfo("Browser", "Edge");
+		report.setSystemInfo("OS", "Windows 11");
+		report.setSystemInfo("Date", date);
+	}
+	
+	@Override
+	public void onFinish(ISuite result)
+	{
+		System.out.println("---Report backup---");
+		report.flush();
+	}
+	
+	@Override
+	public void onTestStart(ITestResult result) {
+		String methodName = result.getMethod().getMethodName();
+		test = report.createTest(methodName);
+		test.log(Status.INFO, methodName+" Execution started");
+	}
+
+	
+	@Override
+	public void onTestSuccess(ITestResult result) {
+		String methodName=result.getMethod().getMethodName();
+		System.out.println(methodName + "---Execution success");
+		test.log(Status.PASS, methodName + "execution success");
+	}
+	
+	@Override
+	public void onTestFailure(ITestResult result) 
+	{
+		String methodName = result.getMethod().getMethodName();
+		test.log(Status.FAIL, methodName+" Execution Failed");
+		Date date=new Date();
+		String expDate = date.toString().replace(" ","_").replace(":", "/");
+		TakesScreenshot tss=(TakesScreenshot)BaseClass.sDriver;
+		
+		String source=tss.getScreenshotAs(OutputType.BASE64);
+	 test.addScreenCaptureFromBase64String(source, methodName +"---"+ expDate);
+		   
+
+	}
+	
+	@Override
+	public void onTestSkipped(ITestResult result) {
+		String methodName = result.getMethod().getMethodName();
+		test.log(Status.SKIP, methodName+" Execution Failed");
+	
+	}
+	
+}

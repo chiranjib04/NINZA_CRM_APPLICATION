@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Suite">
+
+
+<listeners>
+	<listener class-name="com.ninza.crm.listenersUtility.ListenersImplementation"></listener>
+</listeners>
+
+  <test thread-count="2" parallel="tests" name="Distributed_ParellelExecution_Test1">
+    <classes>
+      <class name="com.ninza.crm.Campaign_TestCase.CreateCampaignPageTest"/>
+     
+    </classes>
+  </test> <!-- Distributed_ParellelExecution_Test_1 -->
+  
+  
+<listeners>
+	<listener class-name="com.ninza.crm.listenersUtility.ListenersImplementation"></listener>
+</listeners>
+
+  <test thread-count="2" parallel="tests" name="Distributed_ParellelExecution_Test2">
+    <classes>
+   
+      <class name="com.ninza.crm.d.Product_TestCase.CreateProductPageTest"/>
+    </classes>
+  </test> <!-- Distributed_ParellelExecution_Test_2 -->
+  
+  
+</suite> <!-- Suite -->
