@@ -24,6 +24,7 @@ public class CreateCampaignPageTest extends BaseClass
 	{
 
 
+		System.out.println("hello");
 		CampaignPage campaign_page=new CampaignPage(driver);
 		wait.until(ExpectedConditions.visibilityOf(campaign_page.getCreateCampaignLink()));
 		campaign_page.getCreateCampaignLink().click();
