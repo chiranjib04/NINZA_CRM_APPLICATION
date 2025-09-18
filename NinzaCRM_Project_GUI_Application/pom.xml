@@ -63,7 +63,7 @@
  <!--Profiles Addition--> 
  <profiles>
   	<profile>
-  		<id>Batch_smoke</id>
+  		<id>Smoke</id>
   	 <build>
   		<plugins>
     
@@ -84,26 +84,26 @@
   	</profile>
   
   
-<!--  <profile>-->
-<!--  		<id>Batch_Regression</id>-->
-<!--  	 <build>-->
-<!--  		<plugins>-->
+  <profile>
+  		<id>Regression</id>
+  	 <build>
+  		<plugins>
     
-<!--      		<plugin>-->
-<!--       			 <groupId>org.apache.maven.plugins</groupId>-->
-<!--       			 <artifactId>maven-surefire-plugin</artifactId>-->
-<!--       			 <version>3.5.3</version>-->
-<!--     		    <configuration>-->
-<!--       		       <suiteXmlFiles>-->
-<!--        	           <suiteXmlFile>Regression_BatchExecution.xml</suiteXmlFile>-->
-<!--                   </suiteXmlFiles>-->
-<!--                </configuration>-->
-<!--      		</plugin>-->
+      		<plugin>
+       			 <groupId>org.apache.maven.plugins</groupId>
+       			 <artifactId>maven-surefire-plugin</artifactId>
+       			 <version>3.5.3</version>
+     		    <configuration>
+       		       <suiteXmlFiles>
+        	           <suiteXmlFile>Regression_BatchExecution.xml</suiteXmlFile>
+                   </suiteXmlFiles>
+                </configuration>
+      		</plugin>
       		
-<!--		</plugins>-->
-<!--  	 </build>-->
+		</plugins>
+  	 </build>
   	
-<!--  	</profile>-->
+  	</profile>
   
  </profiles>
    
