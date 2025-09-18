@@ -75,15 +75,11 @@ public class ListenersImplementation implements ITestListener,ISuiteListener
 		
 		String source=tss.getScreenshotAs(OutputType.BASE64);
 	 test.addScreenCaptureFromBase64String(source, methodName +"---"+ expDate);
-		   
-
 	}
 	
 	@Override
 	public void onTestSkipped(ITestResult result) {
 		String methodName = result.getMethod().getMethodName();
 		test.log(Status.SKIP, methodName+" Execution Failed");
-	
 	}
-	
 }
