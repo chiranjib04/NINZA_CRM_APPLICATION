@@ -29,8 +29,8 @@ public class ListenersImplementation implements ITestListener,ISuiteListener
 	{	
 		System.out.println("---report configuration---");
 		Date d=new Date();
-		String date=d.toString().replace(" ", ":").replace(":", "/");
-		ExtentSparkReporter spark=new ExtentSparkReporter("./ExtentReports/Report/"+ date +".html");
+		String date=d.toString().replace(" ", "_").replace(":", "_");
+		ExtentSparkReporter spark=new ExtentSparkReporter("./ExtentReports/Report_"+ date +".html");
 		spark.config().setDocumentTitle("CRM Report");
 		spark.config().setReportName("Ninza CRM Report");
 		spark.config().setTheme(Theme.DARK);
