@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\CHIRANJIB\git\repositoryActual_Framework\NinzaCRM_Project_GUI_Application\BatchExecution11.xml</span>
+                    <span>C:\Users\CHIRANJIB\git\repositoryActual_Framework\NinzaCRM_Project_GUI_Application\Regression_BatchExecution.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,12 +103,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.ninza.crm.d.Product_TestCase.CreateProductPageTest" class="method navigator-link" hash-for-method="CreateProductWithMandatoryFieldsTest">CreateProductWithMandatoryFieldsTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.ninza.crm.d.Product_TestCase.CreateProductPageTest" class="method navigator-link" hash-for-method="CreateProductWithoutAddProductTest">CreateProductWithoutAddProductTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.ninza.crm.Campaign_TestCase.CreateCampaignPageTest" class="method navigator-link" hash-for-method="createCamapignWithMadatoryFieldsTest">createCamapignWithMadatoryFieldsTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.ninza.crm.Campaign_TestCase.CreateCampaignPageTest" class="method navigator-link" hash-for-method="createCamapignWithExpectedCloseDateTest">createCamapignWithExpectedCloseDateTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -126,14 +126,14 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.ninza.crm.d.Product_TestCase.CreateProductPageTest</span>
+              <span class="class-name">com.ninza.crm.Campaign_TestCase.CreateCampaignPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="CreateProductWithMandatoryFieldsTest">
-                  </a> <!-- CreateProductWithMandatoryFieldsTest -->
-                  <span class="method-name">CreateProductWithMandatoryFieldsTest</span>
+                  <a name="createCamapignWithExpectedCloseDateTest">
+                  </a> <!-- createCamapignWithExpectedCloseDateTest -->
+                  <span class="method-name">createCamapignWithExpectedCloseDateTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -141,14 +141,14 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.ninza.crm.Campaign_TestCase.CreateCampaignPageTest</span>
+              <span class="class-name">com.ninza.crm.d.Product_TestCase.CreateProductPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createCamapignWithMadatoryFieldsTest">
-                  </a> <!-- createCamapignWithMadatoryFieldsTest -->
-                  <span class="method-name">createCamapignWithMadatoryFieldsTest</span>
+                  <a name="CreateProductWithoutAddProductTest">
+                  </a> <!-- CreateProductWithoutAddProductTest -->
+                  <span class="method-name">CreateProductWithoutAddProductTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -156,7 +156,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\CHIRANJIB\git\repositoryActual_Framework\NinzaCRM_Project_GUI_Application\BatchExecution11.xml</span>
+            <span class="header-content">C:\Users\CHIRANJIB\git\repositoryActual_Framework\NinzaCRM_Project_GUI_Application\Regression_BatchExecution.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -165,23 +165,23 @@
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;groups&gt;
     &lt;run&gt;
-      &lt;include name=&quot;Smoke&quot;/&gt;
+      &lt;include name=&quot;Regression&quot;/&gt;
     &lt;/run&gt;
   &lt;/groups&gt;
   &lt;groups&gt;
     &lt;run&gt;
-      &lt;include name=&quot;Smoke&quot;/&gt;
+      &lt;include name=&quot;Regression&quot;/&gt;
     &lt;/run&gt;
   &lt;/groups&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.ninza.crm.listenersUtility.ListenersImplementation&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Regression_BatchExecution_Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.ninza.crm.d.Product_TestCase.CreateProductPageTest&quot;/&gt;
       &lt;class name=&quot;com.ninza.crm.Campaign_TestCase.CreateCampaignPageTest&quot;/&gt;
+      &lt;class name=&quot;com.ninza.crm.d.Product_TestCase.CreateProductPageTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
+  &lt;/test&gt; &lt;!-- Regression_BatchExecution_Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -193,7 +193,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (2 classes)</span>
+                <span class="test-name">Regression_BatchExecution_Test (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -204,14 +204,14 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">Smoke</span>
+              <span class="test-group-name">Regression</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">CreateProductWithMandatoryFieldsTest</span>
+                <span class="method-in-group-name">CreateProductWithoutAddProductTest</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
-                <span class="method-in-group-name">createCamapignWithMadatoryFieldsTest</span>
+                <span class="method-in-group-name">createCamapignWithExpectedCloseDateTest</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -233,18 +233,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'CreateProductWithMandatoryFieldsTest')
-data.setCell(0, 2, 'com.ninza.crm.d.Product_TestCase.CreateProductPageTest')
-data.setCell(0, 3, 4837);
+data.setCell(0, 1, 'createCamapignWithExpectedCloseDateTest')
+data.setCell(0, 2, 'com.ninza.crm.Campaign_TestCase.CreateCampaignPageTest')
+data.setCell(0, 3, 4897);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'createCamapignWithMadatoryFieldsTest')
-data.setCell(1, 2, 'com.ninza.crm.Campaign_TestCase.CreateCampaignPageTest')
-data.setCell(1, 3, 1754);
+data.setCell(1, 1, 'CreateProductWithoutAddProductTest')
+data.setCell(1, 2, 'com.ninza.crm.d.Product_TestCase.CreateProductPageTest')
+data.setCell(1, 3, 2155);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -263,24 +263,24 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.ninza.crm.d.Product_TestCase.CreateProductPageTest</span>
+              <span class="ignored-class-name">com.ninza.crm.Campaign_TestCase.CreateCampaignPageTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">CreateProductWithoutAddProductTest</span>
+                <span class="ignored-method-name">createCamapignWithMadatoryFieldsTest</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.ninza.crm.Campaign_TestCase.CreateCampaignPageTest</span>
+              <span class="ignored-class-name">com.ninza.crm.d.Product_TestCase.CreateProductPageTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">beforeSuite</span>
-                <br/>
-                <span class="ignored-method-name">createCamapignWithExpectedCloseDateTest</span>
-                <br/>
-                <span class="ignored-method-name">afterSuite</span>
+                <span class="ignored-method-name">afterTest</span>
                 <br/>
                 <span class="ignored-method-name">beforeTest</span>
                 <br/>
-                <span class="ignored-method-name">afterTest</span>
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+                <span class="ignored-method-name">CreateProductWithMandatoryFieldsTest</span>
+                <br/>
+                <span class="ignored-method-name">afterSuite</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -292,68 +292,68 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.ninza.crm.d.Product_TestCase.CreateProductPageTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.ninza.crm.Campaign_TestCase.CreateCampaignPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">beforeSuite</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">17 ms</span>
+                <span class="method-start">13 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">31 ms</span>
+                <span class="method-start">28 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">1907 ms</span>
+                <span class="method-start">1128 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">CreateProductWithMandatoryFieldsTest</span>
-                <span class="method-start">12503 ms</span>
+                <span class="method-name">createCamapignWithExpectedCloseDateTest</span>
+                <span class="method-start">7790 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">17343 ms</span>
+                <span class="method-start">12702 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">31970 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.ninza.crm.Campaign_TestCase.CreateCampaignPageTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">beforeClass</span>
-                <span class="method-start">35240 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">36064 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">createCamapignWithMadatoryFieldsTest</span>
-                <span class="method-start">46642 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">48396 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">afterClass</span>
-                <span class="method-start">56643 ms</span>
+                <span class="method-start">18132 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.ninza.crm.d.Product_TestCase.CreateProductPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">21372 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">22134 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">CreateProductWithoutAddProductTest</span>
+                <span class="method-start">28321 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">30476 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">35696 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.ninza.crm.Campaign_TestCase.CreateCampaignPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">59906 ms</span>
+                <span class="method-start">38890 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">59923 ms</span>
+                <span class="method-start">38903 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

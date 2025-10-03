@@ -57,7 +57,7 @@ public class CreateCampaignPageTest extends BaseClass
 
 		wait.until(ExpectedConditions.elementToBeClickable(campaign_page.getConfirmBtnclose()));
 		campaign_page.getConfirmBtnclose().click();	
-		System.out.println("----------Smoke testing done--------------------");
+		System.out.println("----------Smoke testingg done--------------------");
 
 
 	}
@@ -101,7 +101,7 @@ public class CreateCampaignPageTest extends BaseClass
 		wait.until(ExpectedConditions.elementToBeClickable(campaign_page.getConfirmBtnclose()));
 		campaign_page.getConfirmBtnclose().click();	
 		Thread.sleep(3000);
-		System.out.println("---------------Regression testing Done---------------");
+		System.out.println("---------------Regressionn testing Done---------------");
 	}
 
 }
